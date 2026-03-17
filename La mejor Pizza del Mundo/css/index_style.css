@@ -47,7 +47,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#formularioComidas {
+#formularioPizzas {
     display: flex;
     flex-direction: column;
     gap: 14px;
