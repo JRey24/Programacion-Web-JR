@@ -1,5 +1,5 @@
 function inicializarPaginaPrincipal() {
-    const formulario = document.getElementById('formularioComidas');
+    const formulario = document.getElementById('formularioPizzas');
     if (!formulario) {
         return;
     }
