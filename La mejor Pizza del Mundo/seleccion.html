@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/seleccion_style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu Pizza</title>
+</head>
+<body>
+    <main class="card card-seleccion">
+        <h1>🍕 Pedido de pizzas 🍕</h1>
+        <p class="subtitulo" id="mensajeFrecuencia"></p>
+        <section class="resumen-frecuencia">
+            <h2>Paso a paso</h2>
+            <ol class="pasos-pedido">
+                <li>Marca el tipo de pizza que deseas.</li>
+                <li>Escribe la cantidad de cada pizza marcada.</li>
+                <li>Si quieres, agrega detalles del pedido.</li>
+                <li>Presiona el botón "Pedido".</li>
+            </ol>
+        </section>
+
+        <form id="formularioPedido" class="formulario-pedido">
+            <h2>✅ Tipo de pizza</h2>
+
+            <div class="grid-pizzas">
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaJamonQueso">
+                        <img src="img/Jamon y queso.jpg" alt="Jamón y queso" class="pizza-img">
+                        <span class="pizza-nombre">🍖🧀 Jamón y queso</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaJamonQueso" name="tipoPizza" value="Jamón y queso">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadJamonQueso">−</button>
+                        <input type="number" id="cantidadJamonQueso" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadJamonQueso">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaNapolitana">
+                        <img src="img/Napolitana.jpg" alt="Napolitana" class="pizza-img">
+                        <span class="pizza-nombre">🍅 Napolitana</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaNapolitana" name="tipoPizza" value="Napolitana">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadNapolitana">−</button>
+                        <input type="number" id="cantidadNapolitana" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadNapolitana">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaMuzzarella">
+                        <img src="img/Mozzarella.jpg" alt="Mozzarella" class="pizza-img">
+                        <span class="pizza-nombre">🧀 Mozzarella</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaMuzzarella" name="tipoPizza" value="Muzzarella">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadMuzzarella">−</button>
+                        <input type="number" id="cantidadMuzzarella" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadMuzzarella">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaHawaiana">
+                        <img src="img/Hawaiana.jpg" alt="Hawaiana" class="pizza-img">
+                        <span class="pizza-nombre">🍍 Hawaiana</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaHawaiana" name="tipoPizza" value="Hawaiana">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadHawaiana">−</button>
+                        <input type="number" id="cantidadHawaiana" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadHawaiana">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaPepperoni">
+                        <img src="img/Peperoni.jpg" alt="Pepperoni" class="pizza-img">
+                        <span class="pizza-nombre">🥩 Pepperoni</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaPepperoni" name="tipoPizza" value="Pepperoni">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadPepperoni">−</button>
+                        <input type="number" id="cantidadPepperoni" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadPepperoni">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaVegetariana">
+                        <img src="img/Vegana.jpg" alt="Vegetariana" class="pizza-img">
+                        <span class="pizza-nombre">🥦 Vegetariana</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaVegetariana" name="tipoPizza" value="Vegetariana">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadVegetariana">−</button>
+                        <input type="number" id="cantidadVegetariana" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadVegetariana">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaCuatroQuesos">
+                        <img src="img/Cuatro Quesos.jpg" alt="Cuatro quesos" class="pizza-img">
+                        <span class="pizza-nombre">🧀🧀 Cuatro quesos</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaCuatroQuesos" name="tipoPizza" value="Cuatro quesos">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadCuatroQuesos">−</button>
+                        <input type="number" id="cantidadCuatroQuesos" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadCuatroQuesos">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaPolloChampinones">
+                        <img src="img/Pollo Champiñones.jpg" alt="Pollo y champiñones" class="pizza-img">
+                        <span class="pizza-nombre">🍗🍄 Pollo y champiñones</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaPolloChampinones" name="tipoPizza" value="Pollo y champiñones">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadPolloChampinones">−</button>
+                        <input type="number" id="cantidadPolloChampinones" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadPolloChampinones">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaMexicana">
+                        <img src="img/Mexicana.jpg" alt="Mexicana" class="pizza-img">
+                        <span class="pizza-nombre">🌶️ Mexicana</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaMexicana" name="tipoPizza" value="Mexicana">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadMexicana">−</button>
+                        <input type="number" id="cantidadMexicana" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadMexicana">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <label class="pizza-card-label" for="pizzaCriolla">
+                        <img src="img/Criolla.jpg" alt="Criolla" class="pizza-img">
+                        <span class="pizza-nombre">🧅🍖🌽 Criolla</span>
+                        <div class="pizza-seleccionar">
+                            <input type="checkbox" id="pizzaCriolla" name="tipoPizza" value="Criolla">
+                            <span>Seleccionar</span>
+                        </div>
+                    </label>
+                    <div class="cantidad-selector">
+                        <button type="button" class="btn-cantidad" data-action="menos" data-target="cantidadCriolla">−</button>
+                        <input type="number" id="cantidadCriolla" class="cantidad-input" value="0" readonly>
+                        <button type="button" class="btn-cantidad" data-action="mas" data-target="cantidadCriolla">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <label for="detallePedido">📝 Detalles del pedido</label>
+                <textarea id="detallePedido" rows="4" placeholder="Ej: sin cebolla, masa delgada..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">🍕 Pedido 🍕</button>
+        </form>
+
+        <section id="resumenFrecuencia" class="resumen-frecuencia">
+            <h2>📋 Resumen del pedido</h2>
+            <ol id="resultadoSeleccion"></ol>
+            <p id="estadoFrecuencia"></p>
+        </section>
+
+        <a href="index.html" class="btn-volver" id="btnVolver">⬅️ Volver a la página principal</a>
+    </main>
+
+    <script src="javascript/seleccion.js"></script>
+</body>
+</html>

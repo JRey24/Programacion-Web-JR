@@ -1,0 +1,226 @@
+.card-seleccion {
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.resumen-frecuencia {
+    border: 1px solid #f0dcc0;
+    border-radius: 12px;
+    background-color: #fff9f2;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.resumen-frecuencia h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#resultadoSeleccion {
+    color: #3b2f2f;
+    font-size: 14px;
+    line-height: 1.6;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#resultadoSeleccion li {
+    margin-bottom: 6px;
+}
+
+.lista-tipo-pizzas {
+    margin-top: 4px;
+    margin-left: 24px;
+    padding-left: 18px;
+}
+
+.lista-tipo-pizzas li {
+    margin-bottom: 4px;
+}
+
+#estadoFrecuencia {
+    margin-top: 8px;
+    color: #b54708;
+    font-size: 13px;
+}
+
+.btn-volver {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f77f00;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.btn-volver::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -140%;
+    width: 45%;
+    height: 100%;
+    transform: skewX(-25deg);
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+}
+
+.btn-volver:hover {
+    transform: translateY(-1px);
+}
+
+.btn-volver:hover::after {
+    animation: brillo-boton 0.75s ease;
+}
+
+.pasos-pedido {
+    color: #3b2f2f;
+    text-align: left;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.formulario-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grid-pizzas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.pizza-card {
+    background-color: #fff9f2;
+    border: 2px solid #f0dcc0;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pizza-card:has(input[type='checkbox']:checked) {
+    border-color: #d62828;
+    box-shadow: 0 4px 18px rgba(214, 40, 40, 0.25);
+}
+
+.pizza-card-label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex: 1;
+}
+
+.pizza-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+    display: block;
+}
+
+.pizza-nombre {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3b2f2f;
+    text-align: center;
+    padding: 8px 8px 4px;
+}
+
+.pizza-seleccionar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 8px 8px;
+    font-size: 13px;
+    color: #5b4a3f;
+    font-weight: 600;
+}
+
+.pizza-seleccionar input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: #d62828;
+    flex-shrink: 0;
+}
+
+.cantidad-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0 10px 10px;
+    padding: 4px 0;
+}
+
+.btn-cantidad {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d6c9b6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #d62828;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.btn-cantidad:hover {
+    background-color: #fff9f2;
+    border-color: #d62828;
+}
+
+.btn-cantidad:active {
+    transform: scale(0.95);
+}
+
+.cantidad-input {
+    width: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #d6c9b6;
+    border-radius: 6px;
+    padding: 4px 8px;
+    background-color: #ffffff;
+    color: #3b2f2f;
+}
+
+@media (max-width: 600px) {
+    .grid-pizzas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 380px) {
+    .grid-pizzas {
+        grid-template-columns: 1fr;
+    }
+}
