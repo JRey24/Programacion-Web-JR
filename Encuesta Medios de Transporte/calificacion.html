@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificacion del Transporte en Bogota</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>🚌 Calificacion del Transporte en Bogotá</h1>
+        <p class="subtitulo">Responde estas preguntas abiertas y de seleccion multiple sobre tu experiencia de movilidad.</p>
+
+        <form id="encuestaCalificacion">
+            <div class="campo">
+                <label for="medioPrincipal">1. Medio de transporte que usas con mas frecuencia</label>
+                <select id="medioPrincipal" name="medioPrincipal" required>
+                    <option value="">Selecciona una opcion</option>
+                    <option value="transmilenio">TransMilenio</option>
+                    <option value="sitp">SITP</option>
+                    <option value="taxi">Taxi</option>
+                    <option value="moto">Moto</option>
+                    <option value="carro">Carro particular</option>
+                    <option value="bicicleta">Bicicleta</option>
+                    <option value="caminar">Caminar</option>
+                    <option value="apps">Apps de transporte (Uber, Didi, etc.)</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>2. Califica de 1 a 5 la puntualidad del transporte publico en Bogota</label>
+                <div class="opciones-grid">
+                    <label><input type="radio" name="puntualidad" value="1" required> 1</label>
+                    <label><input type="radio" name="puntualidad" value="2"> 2</label>
+                    <label><input type="radio" name="puntualidad" value="3"> 3</label>
+                    <label><input type="radio" name="puntualidad" value="4"> 4</label>
+                    <label><input type="radio" name="puntualidad" value="5"> 5</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>3. Selecciona los aspectos que consideras mas problematicos</label>
+                <div class="opciones-grid opciones-check">
+                    <label><input type="checkbox" name="problemas" value="demora"> Demoras</label>
+                    <label><input type="checkbox" name="problemas" value="congestion"> Congestion</label>
+                    <label><input type="checkbox" name="problemas" value="seguridad"> Inseguridad</label>
+                    <label><input type="checkbox" name="problemas" value="costo"> Costo</label>
+                    <label><input type="checkbox" name="problemas" value="limpieza"> Limpieza</label>
+                    <label><input type="checkbox" name="problemas" value="cobertura"> Cobertura de rutas</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>4. En que horarios percibes mayor dificultad para movilizarte? (seleccion multiple)</label>
+                <div class="opciones-grid opciones-check">
+                    <label><input type="checkbox" name="horarios" value="manana"> 5:00 a.m. - 9:00 a.m.</label>
+                    <label><input type="checkbox" name="horarios" value="mediodia"> 11:00 a.m. - 2:00 p.m.</label>
+                    <label><input type="checkbox" name="horarios" value="tarde"> 4:00 p.m. - 8:00 p.m.</label>
+                    <label><input type="checkbox" name="horarios" value="noche"> 8:00 p.m. - 11:00 p.m.</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="experiencia">5. Pregunta abierta: Describe una experiencia positiva o negativa con un medio de transporte en Bogota.</label>
+                <textarea id="experiencia" name="experiencia" rows="4" placeholder="Escribe aqui tu experiencia..." required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="mejora">6. Pregunta abierta: Que mejoras propones para el sistema de transporte en Bogota?</label>
+                <textarea id="mejora" name="mejora" rows="4" placeholder="Comparte tus ideas de mejora..." required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="calificacionGeneral">7. Calificacion general del sistema de transporte en Bogota (0 a 10)</label>
+                <input type="number" id="calificacionGeneral" name="calificacionGeneral" min="0" max="10" required>
+            </div>
+
+            <div class="campo">
+                <label>8. Actividades que realizas durante tus trayectos (seleccion multiple)</label>
+                <div class="opciones-grid opciones-check">
+                    <label><input type="checkbox" name="actividades" value="leer"> Leer o estudiar</label>
+                    <label><input type="checkbox" name="actividades" value="musica"> Escuchar musica o podcast</label>
+                    <label><input type="checkbox" name="actividades" value="trabajo"> Responder mensajes de trabajo/estudio</label>
+                    <label><input type="checkbox" name="actividades" value="descansar"> Descansar</label>
+                    <label><input type="checkbox" name="actividades" value="observar"> Observar la ciudad</label>
+                    <label><input type="checkbox" name="actividades" value="ninguna"> Ninguna, solo concentrarme en el recorrido</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>9. Que organizaciones deberian liderar mejoras en movilidad? (seleccion multiple)</label>
+                <div class="opciones-grid opciones-check">
+                    <label><input type="checkbox" name="organizaciones" value="alcaldia"> Alcaldia de Bogota</label>
+                    <label><input type="checkbox" name="organizaciones" value="secretaria"> Secretaria de Movilidad</label>
+                    <label><input type="checkbox" name="organizaciones" value="transmilenio"> TransMilenio S.A.</label>
+                    <label><input type="checkbox" name="organizaciones" value="policia"> Policia de Transito</label>
+                    <label><input type="checkbox" name="organizaciones" value="operadores"> Operadores privados</label>
+                    <label><input type="checkbox" name="organizaciones" value="ciudadania"> Organizaciones ciudadanas</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="propuestaOrganizacion">10. Pregunta abierta: Que actividad u organizacion deberia tener prioridad y por que?</label>
+                <textarea id="propuestaOrganizacion" name="propuestaOrganizacion" rows="4" placeholder="Escribe tu propuesta aqui..." required></textarea>
+            </div>
+
+            <div class="acciones-finales">
+                <a class="btn-link" href="index.html">⬅ Volver al menu principal</a>
+                <button type="submit" class="btn-enviar">✅ Enviar Calificacion</button>
+            </div>
+        </form>
+
+        <section id="resumenFinal" class="resumen oculto" aria-live="polite">
+            <h2>📋 Resumen de tu encuesta</h2>
+            <div id="contenidoResumen"></div>
+            <a class="btn-link" href="index.html">🏠 Ir al menu principal</a>
+        </section>
+    </main>
+
+    <div id="modalEnviado" class="modal-enviado oculto" aria-live="assertive" role="status">
+        <div class="modal-enviado-contenido">✅ Enviado</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
